@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Puzzle</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="jigsaw.js"></script>
+<link rel="stylesheet" title="basic style" type="text/css" href = "./jigsaw.css" media="all" />
+</head>
+
+<body>
+	<div class="back" align="center">
+		<table frame="box" style="border-collapse: collapse;" border="1" cellspacing="0">
+			<caption><h2>Jigsaw Puzzle</h2></caption>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="timer" align="center">
+		<h1><time>00:00:00</time></h1>
+		<button id="stop">Done</button>
+		<input type="button" value="Reset" onClick="window.location.reload()">
+	</div>
+
+	<div id="pics" align="center"></div>
+
+</body>
+</html>

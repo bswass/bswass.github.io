@@ -1,0 +1,36 @@
+body {
+	background-color: #c0dfd9;
+	color: #3b3a36;
+	font-family: Verdana Trebuchet MS Tahoma;
+}
+
+table {
+	margin: auto;
+}
+
+caption {
+	font-size: x-large;
+	text-transform: uppercase;
+}
+
+button {
+	background-color: #3b3a36;
+	color: white;
+	border: none;
+	padding: 45px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	font-size: x-large;
+}
+
+button:hover {
+	background-color: #b3c2bf;
+}
+
+.btn-reset {
+	border: none;
+	padding-top: 45px;
+	text-align: center;
+}

@@ -1,0 +1,34 @@
+body {
+	background-color: #e6af4b;
+	color: #334431;
+	font-family: Verdana Trebuchet MS Tahoma;
+}
+
+caption {
+	font-size: x-large;
+	text-transform: uppercase;
+}
+
+.pics {
+	display: inline;
+}
+.picimg {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+.back {
+	margin: 0 auto;
+}
+table {
+	border-color: #e05038;
+}
+table td {
+	width: 98px;
+	height: 98px;
+	padding: 0;
+	margin: 0;
+}
+.timer {
+	padding-bottom: 10px;
+}

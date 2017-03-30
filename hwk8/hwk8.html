@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game of 15</title>
+<style>
+body {
+	background-color: #c0dfd9;
+	font-family: Verdana Trebuchet MS Tahoma;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+caption {
+	font-size: x-large;
+	text-transform: uppercase;
+}
+
+button {
+	background-color: #3b3a36;
+	color: #e9ece5;
+	border: none;
+	padding: 45px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	font-size: x-large;
+}
+
+button:hover {
+	background-color: #b3c2bf;
+}
+</style>
+</head>
+
+<body>
+
+<table style="table-layout: fixed;">
+	<caption>Game of Fifteen</caption>
+	<tr>
+		<td><button id="b00" onclick="myFunction(this.id)">1</button></td>
+		<td><button id="b01" onclick="myFunction(this.id)">2</button></td>
+		<td><button id="b02" onclick="myFunction(this.id)">3</button></td>
+		<td><button id="b03" onclick="myFunction(this.id)">4</button></td>
+	</tr>
+	<tr>
+		<td><button id="b10" onclick="myFunction(this.id)">5</button></td>
+		<td><button id="b11" onclick="myFunction(this.id)">6</button></td>
+		<td><button id="b12" onclick="myFunction(this.id)">7</button></td>
+		<td><button id="b13" onclick="myFunction(this.id)">8</button></td>
+	</tr>
+	<tr>
+		<td><button id="b20" onclick="myFunction(this.id)">9</button></td>
+		<td><button id="b21" onclick="myFunction(this.id)">10</button></td>
+		<td><button id="b22" onclick="myFunction(this.id)">11</button></td>
+		<td><button id="b23" onclick="myFunction(this.id)">12</button></td>
+	</tr>
+	<tr>
+		<td><button id="b30" onclick="myFunction(this.id)">13</button></td>
+		<td><button id="b31" onclick="myFunction(this.id)">14</button></td>
+		<td><button id="b32" onclick="myFunction(this.id)">15</button></td>
+		<td><button id="b33" onclick="myFunction(this.id)"></button></td>
+	</tr>
+</table>
+
+<script>
+	var solutions = new Array();
+	solutions[0] = [13,4,5,10,14,2,15,9,11,12,7,6,3,1,8,""];
+	solutions[1] = [10,15,8,12,14,2,13,3,4,6,9,11,1,7,5,""];
+	solutions[2] = [6,11,13,4,12,10,5,2,1,14,3,7,9,15,8,""];
+	solutions[3] = [13,14,10,9,5,2,11,6,7,8,4,15,1,3,12,""];
+	solutions[4] = [9,5,15,10,14,13,3,6,7,12,1,8,4,2,11,""];
+	solutions[5] = [4,7,1,13,9,10,3,2,8,6,5,11,15,14,12,""];
+	solutions[6] = [10,2,15,12,7,6,1,9,8,5,4,11,3,14,13,""];
+	solutions[7] = [12,10,15,9,8,2,7,3,11,6,5,13,14,4,1,""];
+	solutions[8] = [10,12,6,3,2,1,13,5,8,15,7,11,9,14,4,""];
+	solutions[9] = [8,3,4,13,5,2,6,9,10,14,15,1,11,12,7,""];
+
+	var index = Math.floor (Math.random() * solutions.length);
+	var fill = solutions[index]
+
+	var count = 0;
+	for (var i = 0; i < 4; i++) {
+		for (var j = 0; j < 4; j++) {
+			document.getElementById("b" + i.toString() + j.toString()).innerHTML = fill[count];
+			count = count + 1
+		}
+	}
+
+	var blank = "b33"
+	var ha = ""
+	function myFunction(clicked) {
+		var blankRow = blank[1];
+		var blankCol = blank[2];
+		var locRow = clicked[1];
+		var locCol = clicked[2];
+
+		if (locRow == blankRow && Math.abs(locCol-blankCol) == 1) {
+			document.getElementById(blank).innerHTML = document.getElementById(clicked).innerHTML;
+			document.getElementById(clicked).innerHTML = ha;
+			blank = clicked;
+		}
+		if (locCol == blankCol && Math.abs(locRow-blankRow) == 1) {
+			document.getElementById(blank).innerHTML = document.getElementById(clicked).innerHTML;
+			document.getElementById(clicked).innerHTML = ha;
+			blank = clicked;
+		}
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Astronomy Quiz</title>
+	<script type="text/javascript" src="hwk9.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<center><h1>Astronomy Quiz</h1></center>
+		<form onsubmit="return test();" method="post" action="" name="quiz">
+			<div class="form-group">
+
+			<h3>True / False</h3>
+
+			<b>1)</b> According to Kepler the orbit of the earth is a circle with
+		the sun at the center. <br/><br/>
+			<input type="radio" name="orbit" value="1">True<br/>
+			<input type="radio" name="orbit" value="2">False<br/><br/>
+
+			<b>2)</b> Ancient astronomers did consider the heliocentric model of
+		the solar system but rejected it because they could not detect parallax. <br/><br/>
+			<input type="radio" name="parallax" value="1">True<br/>
+			<input type="radio" name="parallax" value="2">False<br/>
+
+			<h3> Multiple Choice</h3>
+
+			<b>3)</b> The total amount of energy that a star emits is directly related
+		to its <br/><br/>
+			<input type="checkbox" name="energy" value="1">a) surface gravity and magnetic field <br/>
+			<input type="checkbox" name="energy" value="2">b) radius and temperature <br/>
+			<input type="checkbox" name="energy" value="3">c) pressure and volume <br/>
+			<input type="checkbox" name="energy" value="4">d) location and velocity <br/><br/>
+
+			<b>4)</b> Stars that live the longest have <br/><br/>
+			<input type="checkbox" name="stars" value="1">a) high mass <br/>
+			<input type="checkbox" name="stars" value="2">b) high temperature <br/>
+			<input type="checkbox" name="stars" value="3">c) lots of hydrogen <br/>
+			<input type="checkbox" name="stars" value="4">d) small mass <br/>
+
+			<h3>Fill in the Blank</h3>
+
+			<b>5)</b> A collection of a hundred billion stars, gas, and dust is
+		called a _____.<br/><br/>
+			<input type="text" name="galaxy" /><br/><br/>
+
+			<b>6)</b> The inverse of the Hubble's constant is a measure of the
+		_____ of the universe.<br/><br/>
+			<input type="text" name="age" /><br/><br/>
+
+			<input class="btn btn-primary" type="submit" value="Grade"  />
+			<input class="btn btn-secondary" type="reset" value="Clear" />
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>
